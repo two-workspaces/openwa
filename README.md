@@ -2,7 +2,7 @@
 
 [![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/new/template/openwa?referralCode=sLjDXb&utm_medium=integration&utm_source=button&utm_campaign=openwa)
 
-OpenWA is a free, open-source WhatsApp API gateway. You link a WhatsApp number by scanning a QR code, then send and receive messages over a REST API, webhooks and a WebSocket, and manage it all from a built-in dashboard. This template runs OpenWA 0.32.0 on Railway as one service with a generated admin key and a volume that keeps your sessions across redeploys.
+OpenWA is a free, open-source WhatsApp API gateway. You link a WhatsApp number by scanning a QR code, then send and receive messages over a REST API, webhooks and a WebSocket, and manage it all from a built-in dashboard. This template runs OpenWA 0.32.1 on Railway as one service with a generated admin key and a volume that keeps your sessions across redeploys.
 
 This is a community template, not made or supported by the OpenWA project. OpenWA is not affiliated with WhatsApp or Meta.
 
@@ -47,7 +47,7 @@ The API and the dashboard run in the same container, on the same domain. Nothing
 - **PostgreSQL or Redis (optional):** the "built-in" datastore switches under **Infrastructure** in the dashboard need Docker and do nothing on Railway. Add a Railway Postgres or Redis service instead and set `DATABASE_TYPE=postgres` with `DATABASE_HOST`, `DATABASE_PORT`, `DATABASE_USERNAME`, `DATABASE_PASSWORD` and `DATABASE_NAME`, or `REDIS_ENABLED=true` with the Redis variables from the docs.
 - **Keep `API_KEY_PEPPER` as generated.** API keys are stored hashed with it. Changing or removing it locks out every key, the admin key included.
 - **Client IPs:** `TRUSTED_PROXIES` is set to Railway's edge network, so per-key IP allowlists see the real caller.
-- **Image:** upstream's `ghcr.io/rmyndharis/openwa:0.32.0`, pinned and unmodified.
+- **Image:** upstream's `ghcr.io/rmyndharis/openwa:0.32.1`, pinned and unmodified.
 
 ## Why Deploy OpenWA on Railway?
 
